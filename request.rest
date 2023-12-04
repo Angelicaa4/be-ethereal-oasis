@@ -1,0 +1,18 @@
+POST http://localhost:5001/auth/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJBbW1hciBBcmlhbnRvIiwiZW1haWwiOiJhbW1hcmFyaWFudG9AZ21haWwuY29tIiwiaWF0IjoxNzAwODQ2MzA2LCJleHAiOjE3MDA4NDYzMzZ9.sBlwCqYSpKPQX0XMgZ5TUBoM6rqsn1lgGVnd2peiSxY
+
+{
+    "username": "Ammar Arianto",
+    "email": "ammararianto@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:5001/auth/login
+Content-Type: application/json
+
+{
+    "username": "Ammar Arianto",
+    "password": "123456"
+}
