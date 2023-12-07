@@ -28,7 +28,7 @@ try {
 app.use(express.json());
 
 app.use(cors({
-    origin: 'http://be-ethereal-oasis-production.up.railway.app',
+    origin: 'http://127.0.0.1:5500',
     credentials: true,
 }));
 
