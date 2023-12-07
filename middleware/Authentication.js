@@ -1,4 +1,4 @@
-// authMiddleware.js
+// Authentication untuk cek user apakah sudah login atau belum
 import jwt from 'jsonwebtoken';
 
 export const Authentication = (req, res, next) => {
