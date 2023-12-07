@@ -3,10 +3,14 @@ import dotenv from "dotenv"
 
 dotenv.config();
 
-// Koneksi ke database menggunakan Sequelize
-const db = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
-    host: process.env.DB_HOST,
-    dialect: process.env.DB_DIALECT,
+const db = new Sequelize({
+  dialect: 'mysql',
+  host: process.env.MYSQL_HOST,
+  port: process.env.MYSQL_PORT,
+  username: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
+  database: process.env.MYSQL_DATABASE,
+  logging: false, // Disable logging SQL queries (optional)
 });
 
 export default db;

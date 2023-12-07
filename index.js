@@ -25,16 +25,12 @@ try {
     console.log(error);
 }
 
-app.use(cors({
-    origin: 'http://127.0.0.1:5500',
-    credentials: true,
-}));
 app.use(express.json());
 
 // Use cookie-parser middleware
 app.use(cookieParser());
 
-app.options('/logout', cors()); // Handle preflight for /auth/logout
+app.options('/logout', cors());
 app.use('/auth', RouteAuth);
 app.use('/', Routereservation);
 
