@@ -27,6 +27,11 @@ try {
 
 app.use(express.json());
 
+app.use(cors({
+    origin: 'http://be-ethereal-oasis-production.up.railway.app',
+    credentials: true,
+}));
+
 // Use cookie-parser middleware
 app.use(cookieParser());
 
