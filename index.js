@@ -38,6 +38,10 @@ app.use(cors({
 app.use(cookieParser());
 
 app.options('/logout', cors());
+app.options('/auth/create', cors());
+app.options('/auth/login', cors());
+app.options('/reservation', cors());
+app.options('/add-reservation', cors());
 app.use('/auth', RouteAuth);
 app.use('/', Routereservation);
 
