@@ -34,4 +34,4 @@ app.options('/logout', cors());
 app.use('/auth', RouteAuth);
 app.use('/', Routereservation);
 
-app.listen(5001, () => console.log("Server running at port 5001...."));
+app.listen(5001 || process.env.MYSQL_PORT, () => console.log("Server running...."));
