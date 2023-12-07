@@ -28,7 +28,7 @@ try {
 app.use(express.json());
 
 app.use(cors({
-    origin: 'http://127.0.0.1:5500',
+    origin: '*', // Allow all origins
     credentials: true,
     methods: ['GET', 'POST'], // Add the necessary HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Add the necessary headers
